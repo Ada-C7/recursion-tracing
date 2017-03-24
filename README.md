@@ -1,7 +1,7 @@
 # Recursion Problems
 
 ## Definitions
-Define the following: 
+Define the following:
 
 - Recursion
 - Recursive Case
@@ -25,8 +25,11 @@ end
 ```
 
 - What is mystery1(5)?
+15
 - What is mystery1(10)?
+55
 - What is mystery1(0)?
+stack too deep
 
 ### Trace #2
 ```
@@ -40,8 +43,11 @@ end
 ```
 
 - What is mystery2(123)?
+6
 - What is mystery2(9005)?
+14
 - What is mystery2(-123)?
+-123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
 
 ### Trace #3
@@ -61,8 +67,11 @@ end
 ```
 
 - What is mystery3(1)?
+100
 - What is mystery3(13)?
+100
 - What is mystery3(-6)?
+200
 
 ### Trace #4
 ```
@@ -76,8 +85,11 @@ end
 ```
 
 - What is mystery4(10,2)?
+100
 - What is mystery4(4,3)?
+64
 - What is mystery4(5,0)?
+1
 
 ### Trace #5
 ```
@@ -91,8 +103,11 @@ end
 ```
 
 - What is mystery5("hi")?
+**
 - What is mystery5("")?
+""
 - What is mystery5("Hi, there!")?
+"*********"
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
 
 ### Trace #6
@@ -111,6 +126,9 @@ end
 ```
 
 - What is mystery6("goodnight moon")?
+" moon goodnight"
 - What is mystery6("Ada Developers Academy")?
+" Academy Developers Ada"
 - What is mystery6("Hi, there!")?
+" there! Hi,"
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
