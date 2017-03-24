@@ -24,9 +24,12 @@ def mystery1(n)
 end
 ```
 
-- What is mystery1(5)?
+- What is mystery1(5)? 
+# Answer: 5 + 4 + 3 + 2 + 1 = 15
 - What is mystery1(10)?
+# Answer: 10 + 9 + 8 + 7 + 6 +5 + 4 + 3 + 2 + 1 = 55
 - What is mystery1(0)?
+# Answer: infinite recursion (never hits base case n == 1)
 
 ### Trace #2
 ```
@@ -40,9 +43,13 @@ end
 ```
 
 - What is mystery2(123)?
+# Answer: 3 + 2 + 1 = 6
 - What is mystery2(9005)?
+# Answer: 5 + 0 + 0 + 9 = 14
 - What is mystery2(-123)?
+# Answer: -123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
+# Answer: Add a conditional so that if the argument is negative, multiply it by -1
 
 ### Trace #3
 ```
@@ -61,8 +68,11 @@ end
 ```
 
 - What is mystery3(1)?
-- What is mystery3(13)?
+# Answer: m3(1) -> m3(0) = 100
+- What is mystery3(13)? 
+# Answer: 100
 - What is mystery3(-6)?
+# Answer: 200
 
 ### Trace #4
 ```
@@ -76,8 +86,11 @@ end
 ```
 
 - What is mystery4(10,2)?
+# Answer: 10 * 10 * 1 = 100
 - What is mystery4(4,3)?
+# Answer: 4 * 4 * 4 * 1 = 64
 - What is mystery4(5,0)?
+# Answer: 1
 
 ### Trace #5
 ```
@@ -91,9 +104,13 @@ end
 ```
 
 - What is mystery5("hi")?
+# Answer: "**"
 - What is mystery5("")?
+# Answer: ""
 - What is mystery5("Hi, there!")?
+# Answer: "**********"
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
+ 
 
 ### Trace #6
 ```
@@ -111,6 +128,9 @@ end
 ```
 
 - What is mystery6("goodnight moon")?
+# Answer: " moon goodnight"
 - What is mystery6("Ada Developers Academy")?
+# Answer: " Academy Developers Academy"
 - What is mystery6("Hi, there!")?
+# Answer: " there! Hi,"
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
