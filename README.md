@@ -1,14 +1,14 @@
 # Recursion Problems
 
 ## Definitions
-Define the following: 
+Define the following:
 
-- Recursion
-- Recursive Case
-- Base Case
-- Activation Chain/Stack
-- Activation Record/Call
-- Infinite Recursion/Stack Overflow/Stack too deep
+- Recursion: a method that calls itself
+- Recursive Case: a conditional branch within a recursive method that actually calls the method recursively
+- Base Case: the conditional branch within a recursive method that actually generates a value and stops the recursion
+- Activation Chain/Stack: the series of recursive calls that takes place in executing a recursive method
+- Activation Record/Call: each step within the activation chain where the code in the recursive case is executed (and the base case that ends the series)
+- Infinite Recursion/Stack Overflow/Stack too deep: the consequence of executing a recursive method in circumstances where it never reaches its base case and goes on trying to call itself forever
 - Tail Recursion
 
 ## Tracing through a recursive method
@@ -24,9 +24,9 @@ def mystery1(n)
 end
 ```
 
-- What is mystery1(5)?
-- What is mystery1(10)?
-- What is mystery1(0)?
+- What is mystery1(5)? 15
+- What is mystery1(10)? 55
+- What is mystery1(0)? this call results in stack overflow
 
 ### Trace #2
 ```
@@ -39,10 +39,11 @@ def mystery2(n)
 end
 ```
 
-- What is mystery2(123)?
-- What is mystery2(9005)?
-- What is mystery2(-123)?
+- What is mystery2(123)? 6
+- What is mystery2(9005)?14
+- What is mystery2(-123)?-123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
+use absolute value in the conditional (if abs(n) < 10)
 
 ### Trace #3
 ```
@@ -60,9 +61,9 @@ def mystery3(n)
 end
 ```
 
-- What is mystery3(1)?
-- What is mystery3(13)?
-- What is mystery3(-6)?
+- What is mystery3(1) ?100
+- What is mystery3(13)? 100
+- What is mystery3(-6)? 200
 
 ### Trace #4
 ```
@@ -75,9 +76,9 @@ def mystery4(b,e)
 end
 ```
 
-- What is mystery4(10,2)?
-- What is mystery4(4,3)?
-- What is mystery4(5,0)?
+- What is mystery4(10,2)? 100
+- What is mystery4(4,3)? 64
+- What is mystery4(5,0)? 1
 
 ### Trace #5
 ```
@@ -90,8 +91,8 @@ def mystery5(s)
 end
 ```
 
-- What is mystery5("hi")?
-- What is mystery5("")?
+- What is mystery5("hi")? "**"
+- What is mystery5("")? ""
 - What is mystery5("Hi, there!")?
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
 
