@@ -1,15 +1,22 @@
 # Recursion Problems
 
 ## Definitions
-Define the following: 
+Define the following:
 
 - Recursion
+Calling a method within itself, or calling another method that calls the first method.
 - Recursive Case
+The input(s) for the recursive method for which the recursive part is called.
 - Base Case
+The input(s) for the recursive method for which the non-recursive part is called.
 - Activation Chain/Stack
+The activation chain is the iterative process of tracing through what the values of n (input) are as the recursion happens.
 - Activation Record/Call
+An activation record is a specific value of n during one interation of the recursion.
 - Infinite Recursion/Stack Overflow/Stack too deep
+This is when the base cases don't handle a particular input and the recursion gets called infinitely, so the program exits with a "Stacks too deep" type error.
 - Tail Recursion
+When the recursive call is the very last thing in the function/method. This is not the 'usual' way of implementing a recursive method.
 
 ## Tracing through a recursive method
 
@@ -25,8 +32,11 @@ end
 ```
 
 - What is mystery1(5)?
+15
 - What is mystery1(10)?
+55
 - What is mystery1(0)?
+stack too deep
 
 ### Trace #2
 ```
@@ -40,8 +50,11 @@ end
 ```
 
 - What is mystery2(123)?
+6
 - What is mystery2(9005)?
+14
 - What is mystery2(-123)?
+-123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
 
 ### Trace #3
@@ -61,8 +74,11 @@ end
 ```
 
 - What is mystery3(1)?
+100
 - What is mystery3(13)?
+100
 - What is mystery3(-6)?
+200
 
 ### Trace #4
 ```
@@ -76,8 +92,11 @@ end
 ```
 
 - What is mystery4(10,2)?
+100
 - What is mystery4(4,3)?
+64
 - What is mystery4(5,0)?
+1
 
 ### Trace #5
 ```
@@ -91,8 +110,11 @@ end
 ```
 
 - What is mystery5("hi")?
+**
 - What is mystery5("")?
+""
 - What is mystery5("Hi, there!")?
+"*********"
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
 
 ### Trace #6
@@ -111,6 +133,9 @@ end
 ```
 
 - What is mystery6("goodnight moon")?
+" moon goodnight"
 - What is mystery6("Ada Developers Academy")?
+" Academy Developers Ada"
 - What is mystery6("Hi, there!")?
+" there! Hi,"
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
