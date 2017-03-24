@@ -93,7 +93,7 @@ end
 
 - What is mystery5("hi")? "**"
 - What is mystery5("")? ""
-- What is mystery5("Hi, there!")?
+- What is mystery5("Hi, there!")? "**********"
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
 
 ### Trace #6
@@ -111,7 +111,7 @@ def mystery6(s)
 end
 ```
 
-- What is mystery6("goodnight moon")?
-- What is mystery6("Ada Developers Academy")?
-- What is mystery6("Hi, there!")?
+- What is mystery6("goodnight moon")?"moon goodnight"
+- What is mystery6("Ada Developers Academy")?"Developers Academy Ada"
+- What is mystery6("Hi, there!")?"there! Hi,"
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
