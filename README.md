@@ -6,9 +6,9 @@ Define the following:
 - Recursion occurs when a method or a function calls itself.
 - Recursive Case  - dividing problem into smaller pieces by calling same method inside the method until the base case is found.
 - Base Case - the smallest part of the problem, that could be solved immediately. Recursive function stops execution when the base case is solved.
-- Activation Chain/Stack - 
-- Activation Record/Call -
-- Infinite Recursion/Stack Overflow/Stack too deep -
+- Activation Chain/Stack - list of all recursion calls
+- Activation Record/Call - each step of activation stack
+- Infinite Recursion/Stack Overflow/Stack too deep - recursion that can't reach base case
 - Tail Recursion
 
 ## Tracing through a recursive method
