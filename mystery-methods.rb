@@ -14,6 +14,16 @@ def mystery2(n)
   end
 end
 
+def mystery2_new(n)
+  if n.abs < 10
+    return n
+  elsif n > 0
+    return (n%10) + mystery2_new(n/10)
+  else
+    return -(n.abs%10) + mystery2_new((n/10.0).ceil)
+  end
+end
+
 def mystery3(n)
   if n == 0
     return 100
@@ -43,6 +53,16 @@ def mystery5(s)
   end
 end
 
+def mystery5_new(s)
+  if s.length == 0
+    return ""
+  elsif s[0].match(/[a-z0-9]/)
+    return "*" + mystery5_new(s[1..-1])
+  else
+    return s[0] + mystery5_new(s[1..-1])
+  end
+end
+
 def mystery6(s)
   if s == nil || s.length == 0
     return ""
@@ -52,5 +72,13 @@ def mystery6(s)
       space += 1
     end
     return mystery6(s[(space+1)..-1]) + " " + s[0...space]
+  end
+end
+
+def mystery6_new(s)
+  if s == nil || s.length == 0
+    return ""
+  else
+    return s[-1] + mystery6_new(s[0...-1])
   end
 end
