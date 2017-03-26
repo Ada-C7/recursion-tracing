@@ -26,7 +26,7 @@ end
 
 - What is mystery1(5)? 15
 - What is mystery1(10)? 55
-- What is mystery1(0)? infinite recurion
+- What is mystery1(0)? infinite recursion
 
 ### Trace #2
 ```
