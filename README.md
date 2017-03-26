@@ -9,7 +9,7 @@ Define the following:
 - Activation Chain/Stack: following what is happening (the bubbles!)
 - Activation Record/Call: each thing that happens (each bubble!)
 - Infinite Recursion/Stack Overflow/Stack too deep: if we had no point where we were going to stop. Or we can't hit the base case
-- Tail Recursion:
+- Tail Recursion: this is a subroutine call performed as the final action of a procedure (don't recall discussing this in class)
 
 ## Tracing through a recursive method
 
