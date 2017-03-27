@@ -121,17 +121,17 @@ end
 - What is mystery5("Hi, there!")? **********
 
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
-I only found a Regular Expression way to do this. Is there a more standard way to do this, without 'Ruby magic'?
-
-Using Regex:
-
-def mystery5B(s)
-  s.gsub!(/[^a-zA-Z]/, '')
-    if s.length == 0
-      return ""
+def mystery5C(s)
+  alpha_all = ("A".."Z").to_a.concat ("a".."z").to_a
+  if s.length == 0
+    return ""
+  else
+    if alpha_all.include?(s[0])
+      return "*" + mystery5C(s[1..-1])
     else
-      return "*" + mystery5(s[1..-1])
+      return mystery5C(s[1..-1])
     end
+  end
 end
 
 
