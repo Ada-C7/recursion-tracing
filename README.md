@@ -1,15 +1,15 @@
 # Recursion Problems
 
 ## Definitions
-Define the following: 
+Define the following:
 
-- Recursion
-- Recursive Case
-- Base Case
-- Activation Chain/Stack
-- Activation Record/Call
-- Infinite Recursion/Stack Overflow/Stack too deep
-- Tail Recursion
+- Recursion : A method that calls itself
+- Recursive Case : A problem that divides the problem into a smaller problem
+- Base Case : A problem that can be solved immediately(stopping case)
+- Activation Chain/Stack : When you draw the whole process with bubbles(Activation Record) to figure out the recursive case, this whole thing is called Activation Chain(Entire process to solve a recursive algorithm).
+- Activation Record/Call : Individual bubbles in Activation Chain(each method call)
+- Infinite Recursion/Stack Overflow/Stack too deep : A Recursive algorithm that never his a Base Case.
+- Tail Recursion :
 
 ## Tracing through a recursive method
 
@@ -24,9 +24,27 @@ def mystery1(n)
 end
 ```
 
-- What is mystery1(5)?
-- What is mystery1(10)?
-- What is mystery1(0)?
+- What is mystery1(5)?  15
+ 5+m(4)
+   4+m(3)
+     3+m(2)
+       2+m(1)
+          1
+
+- What is mystery1(10)?  55
+  10+m(9)
+     9+m(8)
+       8+m(7)
+         7+m(6)
+           6+m(5)
+             5+m(4)
+               4+m(3)
+                 3+m(2)
+                   2+m(1)
+                      1
+
+- What is mystery1(0)? stack over flow
+
 
 ### Trace #2
 ```
@@ -39,9 +57,19 @@ def mystery2(n)
 end
 ```
 
-- What is mystery2(123)?
-- What is mystery2(9005)?
-- What is mystery2(-123)?
+- What is mystery2(123)? 6
+ 3+m2(12)
+    2+m2(1)
+        1
+
+- What is mystery2(9005)? 14
+ 5+m2(900)
+    0+m2(90)
+      0+m2(9)
+          9
+
+- What is mystery2(-123)? -123
+
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
 
 ### Trace #3
@@ -60,9 +88,25 @@ def mystery3(n)
 end
 ```
 
-- What is mystery3(1)?
-- What is mystery3(13)?
-- What is mystery3(-6)?
+- What is mystery3(1)? 100
+  m3(1)
+    m3(0)
+      100
+- What is mystery3(13)? 100
+  m3(13)
+    m3(12)
+       m3(6)
+         m3(3)
+           m3(2)
+             m3(1)
+               m3(0)
+                 100
+- What is mystery3(-6)? 200
+  m3(-6)
+    m3(-3)
+      m3(-2)
+        m3(-1)
+           200
 
 ### Trace #4
 ```
@@ -75,9 +119,21 @@ def mystery4(b,e)
 end
 ```
 
-- What is mystery4(10,2)?
-- What is mystery4(4,3)?
-- What is mystery4(5,0)?
+- What is mystery4(10,2)? 100
+ m4(10,2)
+  10 * m4(10,1)
+      10 * m4(10,0)
+              1
+
+- What is mystery4(4,3)? 64
+ m4(4,3)
+   4 * m4(4,2)
+       4 * m4(4,1)
+           4 * m4(4,0)
+                 1
+- What is mystery4(5,0)? 1
+ m4(5,0)
+    1
 
 ### Trace #5
 ```
@@ -90,10 +146,40 @@ def mystery5(s)
 end
 ```
 
-- What is mystery5("hi")?
-- What is mystery5("")?
-- What is mystery5("Hi, there!")?
+- What is mystery5("hi")? "**"
+  m5("hi")
+    * + m5(i)
+        * + ""
+
+- What is mystery5("")? ""
+  m5("")
+     ""
+- What is mystery5("Hi, there!")? "**********"
+  * + m5("i, there!")
+      * + m5(", there!")
+          * + m5(" there!")
+              * + m5("there!")
+                  * + m5("here!")
+                      * + m5("ere!")
+                          * + m5("re!")
+                              * + m5("e!")
+                                  * + m5("!")
+                                      * + m5("")
+                                           ""
+
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
+
+def mystery5_added_fun(s)
+  if s.length == 0
+    return ""
+  else
+    if s[0] == " "
+      return " " + mystery5_added_fun(s[1..-1])
+    else
+      return "*" + mystery5_added_fun(s[1..-1])
+    end
+  end
+end
 
 ### Trace #6
 ```
@@ -110,7 +196,40 @@ def mystery6(s)
 end
 ```
 
-- What is mystery6("goodnight moon")?
-- What is mystery6("Ada Developers Academy")?
-- What is mystery6("Hi, there!")?
+- What is mystery6("goodnight moon")? " moon goodnight"
+
+  m6("goodnight moon")
+    = m6("moon") + " " + "goodnight"
+
+      m6("moon") = m6(nil) + " " + "moon"
+
+  m6("goodnight moon") = m6(nil) + " " + "moon" + " " + "goodnight"
+                       = " moon goodnight"
+
+
+- What is mystery6("Ada Developers Academy")? " Academy Developers Ada"
+
+  m6("Ada Developers Academy")
+   = m6("Developers Academy") + " " + "Ada"
+
+     m6("Developers Academy")
+     = m6("Academy") + " " + "Developers"
+
+       m6("Academy") = m6(nil) + " " + "Academy"
+
+m6("Ada Developers Academy") = " Academy Developers Ada"
+
+
+- What is mystery6("Hi, there!")? " there! Hi,"
+
+
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
+
+def mystery6_added_fun(s)
+  if s == "" || s.length == 0
+    return ""
+  else
+    space = s.length - 1
+    return s[space] + mystery6_added_fun(s[0...space])
+  end
+end
