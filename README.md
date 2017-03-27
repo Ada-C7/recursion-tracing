@@ -50,12 +50,7 @@ Define the following:
 
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?
   def mystery2(n)
-    if n > 10     
-      return n   
-    else     
-      return (n%10) + mystery2(n/10)   
-    end
-  end  
+    
 
 ### Trace #3
 - What is mystery3(1)?
