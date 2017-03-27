@@ -3,13 +3,13 @@
 ## Definitions
 Define the following:
 
-- Recursion
-- Recursive Case
-- Base Case
-- Activation Chain/Stack
-- Activation Record/Call
-- Infinite Recursion/Stack Overflow/Stack too deep
-- Tail Recursion
+- Recursion: method calling itself.
+- Recursive Case: a case that would cause the method to run itself
+- Base Case: the case that would cause the method to stop
+- Activation Chain/Stack: how the recursive method goes to the base case
+- Activation Record/Call: each time the recursive method happens
+- Infinite Recursion/Stack Overflow/Stack too deep: when base case is never reached
+- Tail Recursion: instance where the recursive call is the very last thing in the function
 
 ## Tracing through a recursive method
 
