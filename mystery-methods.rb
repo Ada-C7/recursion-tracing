@@ -6,11 +6,39 @@ def mystery1(n)
   end
 end
 
+
 def mystery2(n)
   if n < 10
     return n
   else
     return (n%10) + mystery2(n/10)
+  end
+end
+
+def mystery2B(n)
+  if n < 10 && n > -10
+    return n
+  elsif n >= 10
+    return (n%10) + mystery2(n/10)
+  else m = n.abs
+    a = (m%10) + mystery2(m/10)
+    return -a
+  end
+end
+
+def mystery2C(n)
+  if n>=0 
+    if n < 10
+      return n
+    else
+      return (n%10) + mystery2(n/10)
+    end
+  else
+    if n > -10
+      return n
+    else m = n.abs
+      return -((m%10) + mystery2(m/10))
+    end
   end
 end
 
