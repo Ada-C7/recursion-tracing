@@ -49,7 +49,14 @@ Define the following:
   Answer = -123
 
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?
-  def mystery2(n)
+  def mystery2_new(n)
+  if n.abs < 10
+    return n
+  else
+    c = (n<0 ? -1 : 1)
+    return c * (n.abs%10) + mystery2_new(c*(n.abs/10))
+  end
+end
     
 
 ### Trace #3
