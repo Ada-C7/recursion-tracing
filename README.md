@@ -3,13 +3,13 @@
 ## Definitions
 Define the following: 
 
-- Recursion
-- Recursive Case
-- Base Case
-- Activation Chain/Stack
-- Activation Record/Call
-- Infinite Recursion/Stack Overflow/Stack too deep
-- Tail Recursion
+- Recursion: a function that calls itself (see recursion)
+- Recursive Case: The function that is called within itself, should bring you closer to the base case.
+- Base Case: the base case is what stops the recursion from infinite recursion
+- Activation Chain/Stack - This still isn't clear to me
+- Activation Record/Call - This still isn't clear to me
+- Infinite Recursion/Stack Overflow/Stack too deep: Recursion that would go on forever
+- Tail Recursion: With each evaluation of the recursive call, the running total is updated. 
 
 ## Tracing through a recursive method
 
