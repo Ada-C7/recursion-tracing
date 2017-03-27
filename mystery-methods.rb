@@ -27,7 +27,7 @@ def mystery2B(n)
 end
 
 def mystery2C(n)
-  if n>=0 
+  if n>=0
     if n < 10
       return n
     else
@@ -69,6 +69,15 @@ def mystery5(s)
   else
     return "*" + mystery5(s[1..-1])
   end
+end
+
+def mystery5B(s)
+  s.gsub!(/[^a-zA-Z]/, '')
+    if s.length == 0
+      return ""
+    else
+      return "*" + mystery5(s[1..-1])
+    end
 end
 
 def mystery6(s)
