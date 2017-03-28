@@ -131,7 +131,7 @@ end
 ```
 
 - What is mystery6("goodnight moon")?
-      " moon goodnightn"
+      " moon goodnight"
 - What is mystery6("Ada Developers Academy")?
         " Academy Developers Ada"
 - What is mystery6("Hi, there!")?
