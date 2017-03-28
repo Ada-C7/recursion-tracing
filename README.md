@@ -9,7 +9,7 @@ Define the following:
       The case in a recursive method, where the recursion happens (ie where the method itself is called.)
 - Base Case:
       The case in a recursive method, where no recursion happens.        
-      Generally successive iterations of the recursive case bring you closer to the base case, and the base case is where the method evaluation finally terminates.
+      Generally successive terations of the recursive case bring you closer to the base case, and the base case is where the method evaluation finally terminates.
 - Activation Chain/Stack:
       The entire chain of successive iterations of the recursive case and the eventual base case that are evaluated when the method is invoked.
 - Activation Record/Call:
@@ -135,7 +135,6 @@ def mystery5C(s)
 end
 
 
-
 ### Trace #6
 ```
 def mystery6(s)
@@ -151,7 +150,20 @@ def mystery6(s)
 end
 ```
 
-- What is mystery6("goodnight moon")?
+- What is mystery6("goodnight moon")?  
+     " moon goodnight" (note: includes initial underscore)
 - What is mystery6("Ada Developers Academy")?
+    " Academy Developers Ada"
 - What is mystery6("Hi, there!")?
+    " there! Hi,"
+
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
+
+
+def mystery6B(s)
+  if s == nil || s.length == 0
+    return ""
+  else
+    return mystery6B(s[1..-1]) + s[0]
+  end
+end

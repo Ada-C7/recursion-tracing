@@ -1,5 +1,3 @@
-require 'pry'
-
 def mystery1(n)
   if n == 1
     return n
@@ -76,11 +74,11 @@ end
 #Changing only alphabetic characters to * using RegEx (regular expression)
 def mystery5B(s)
   s.gsub!(/[^a-zA-Z]/, '')
-    if s.length == 0
-      return ""
-    else
-      return "*" + mystery5(s[1..-1])
-    end
+  if s.length == 0
+    return ""
+  else
+    return "*" + mystery5(s[1..-1])
+  end
 end
 
 #Changing only alphabetic characters to * without RegEx
@@ -98,8 +96,6 @@ def mystery5C(s)
 end
 
 
-
-
 def mystery6(s)
   if s == nil || s.length == 0
     return ""
@@ -109,5 +105,14 @@ def mystery6(s)
       space += 1
     end
     return mystery6(s[(space+1)..-1]) + " " + s[0...space]
+  end
+end
+
+
+def mystery6B(s)
+  if s == nil || s.length == 0
+    return ""
+  else
+    return mystery6B(s[1..-1]) + s[0]
   end
 end
