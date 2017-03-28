@@ -4,12 +4,19 @@
 Define the following: 
 
 - Recursion
+- When the result of a method dependes on the result of the same method but called with a smaller case. You know you have a recrusive method if the method calls its self 
 - Recursive Case
+- The expression of code where the method is calling its self
 - Base Case
+- the expression of code where the recursion stops 
 - Activation Chain/Stack
+- A recurive method has to keep track of each instance the method is being called - the function does this with stack that holds each instantiation. 
 - Activation Record/Call
+- An activation record is an individual "item" in the activation stack
 - Infinite Recursion/Stack Overflow/Stack too deep
+- When the recrusive method will never reach the base case - it will go one forever/computer will error cause it doesn't have enough memory to keep track of all the times the method has been called. - IE the Activation Stack is too large for the computers memory
 - Tail Recursion
+- normally every recurive call has to complete before the method begins to do work to find the result - in tail recursion the end result is being updated with each new instantiation
 
 ## Tracing through a recursive method
 
