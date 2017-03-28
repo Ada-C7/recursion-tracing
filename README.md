@@ -25,12 +25,12 @@ end
 ```
 
 - What is mystery1(5)? 
-    15
+- 15
 
 - What is mystery1(10)? 
-    55
+- 55
 - What is mystery1(0)?
-    infinite recursion - will never reach base-case
+- infinite recursion - will never reach base-case
 ### Trace #2
 ```
 def mystery2(n)
@@ -43,14 +43,13 @@ end
 ```
 
 - What is mystery2(123)?
-    6
+-6
 - What is mystery2(9005)?
-    14
+- 14
 - What is mystery2(-123)?
-    -123
+- -123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
-    Depends on if we want -123 to be -1 + 2 + 3 or - (1 + 2 + 3) 
-    Either case we need to add a condition that checks to see if the integer passed is negative - if true, than decided if we should take the absolute value - run the method and at the end make it negative again
+ - Depends on if we want -123 to be -1 + 2 + 3 or - (1 + 2 + 3). Either case we need to add a condition that checks to see if the integer passed is negative - if true, than decided if we should take the absolute value - run the method and at the end make it negative again
 
 ### Trace #3
 ```
@@ -69,11 +68,11 @@ end
 ```
 
 - What is mystery3(1)?
-      100
+- 100
 - What is mystery3(13)?
-      100
+- 100
 - What is mystery3(-6)?
-      200
+- 200
 
 ### Trace #4
 ```
@@ -87,12 +86,12 @@ end
 ```
 
 - What is mystery4(10,2)?
-      10^ 2 = 100
+- 10^ 2 = 100
 - What is mystery4(4,3)?
-      4^3 = 64
+- 4^3 = 64
 - What is mystery4(5,0)?
-      5^0 = 1
-NOTE: I did trace the recursions and at the end noticed the pattern of b^e :)
+- 5^0 = 1
+- NOTE: I did trace the recursions and at the end noticed the pattern of b^e :)
 
 ### Trace #5
 ```
@@ -131,9 +130,9 @@ end
 ```
 
 - What is mystery6("goodnight moon")?
-      " moon goodnight"
+- " moon goodnight"
 - What is mystery6("Ada Developers Academy")?
-        " Academy Developers Ada"
+- " Academy Developers Ada"
 - What is mystery6("Hi, there!")?
-        " there! Hi,"
+- " there! Hi,"
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
