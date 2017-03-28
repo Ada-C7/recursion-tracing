@@ -4,13 +4,19 @@
 Define the following:
 
 - Recursion
+Recursion : See recursion
 - Recursive Case
+A problem that can be divided into smaller problems
 - Base Case
+A problem that can be solved immediately
 - Activation Chain/Stack
+This is what Crystal used bubbles to show us, how the methods are using one another
 - Activation Record/Call
+ The methods that are called as we follow what is happening in a recursive call
 - Infinite Recursion/Stack Overflow/Stack too deep
+Never ending recursion, too much memory/resources being used up to solve this never ending recursion
 - Tail Recursion
-
+the return value of any given recursive step is the same as the return value of the next recursive call
 ## Tracing through a recursive method
 
 ### Trace #1
