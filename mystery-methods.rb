@@ -47,11 +47,10 @@ end
 def mystery6(s)
   if s == nil || s.length == 0
     return ""
-  else
+  end
     space = 0
     until space >= s.length || s[space] == " "
       space += 1
     end
     return mystery6(s[(space+1)..-1]) + " " + s[0...space]
-  end
 end
