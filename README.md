@@ -3,13 +3,26 @@
 ## Definitions
 Define the following:
 
-- Recursion
-- Recursive Case
-- Base Case
-- Activation Chain/Stack
-- Activation Record/Call
-- Infinite Recursion/Stack Overflow/Stack too deep
-- Tail Recursion
+- Recursion -
+When a method is called again within the method.
+
+- Recursive Case -
+Any case along the stack within a recursive method that would trigger the internal recursive portion of the method to be called.
+
+- Base Case -
+The case within the method that once satisfied, breaks the loop.
+
+- Activation Chain/Stack -
+The stack of routines activated one after another, say A, then B, then, C.
+
+- Activation Record/Call -
+The history of input calls to the method as the method recurses, keeping track of the progress toward the base case for instance.
+
+- Infinite Recursion/Stack Overflow/Stack too deep -
+The method continues to call itself in an infinite loop adding too much to the stack
+
+- Tail Recursion -
+It's a subroutine call performed as the final action of the method.
 
 ## Tracing through a recursive method
 
@@ -44,7 +57,7 @@ end
 
 - What is mystery2(123)?  6
 - What is mystery2(9005)?  14
-- What is mystery2(-123)?  123
+- What is mystery2(-123)?  -123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
 
 ### Trace #3
