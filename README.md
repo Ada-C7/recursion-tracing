@@ -1,15 +1,28 @@
 # Recursion Problems
 
 ## Definitions
-Define the following: 
+Define the following:
 
-- Recursion
-- Recursive Case
-- Base Case
-- Activation Chain/Stack
-- Activation Record/Call
-- Infinite Recursion/Stack Overflow/Stack too deep
-- Tail Recursion
+- Recursion -
+When a method is called again within the method.
+
+- Recursive Case -
+Any case along the stack within a recursive method that would trigger the internal recursive portion of the method to be called.
+
+- Base Case -
+The case within the method that once satisfied, breaks the loop.
+
+- Activation Chain/Stack -
+The stack of routines activated one after another, say A, then B, then, C.
+
+- Activation Record/Call -
+The history of input calls to the method as the method recurses, keeping track of the progress toward the base case for instance.
+
+- Infinite Recursion/Stack Overflow/Stack too deep -
+The method continues to call itself in an infinite loop adding too much to the stack
+
+- Tail Recursion -
+It's a subroutine call performed as the final action of the method.
 
 ## Tracing through a recursive method
 
@@ -23,10 +36,11 @@ def mystery1(n)
   end
 end
 ```
+- What is mystery1(5)? 15
+- What is mystery1(10)? 55
+- What is mystery1(0)? Infinite recursion
 
-- What is mystery1(5)?
-- What is mystery1(10)?
-- What is mystery1(0)?
+
 
 ### Trace #2
 ```
@@ -37,11 +51,13 @@ def mystery2(n)
     return (n%10) + mystery2(n/10)
   end
 end
+
+
 ```
 
-- What is mystery2(123)?
-- What is mystery2(9005)?
-- What is mystery2(-123)?
+- What is mystery2(123)?  6
+- What is mystery2(9005)?  14
+- What is mystery2(-123)?  -123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
 
 ### Trace #3
@@ -60,9 +76,9 @@ def mystery3(n)
 end
 ```
 
-- What is mystery3(1)?
-- What is mystery3(13)?
-- What is mystery3(-6)?
+- What is mystery3(1)? 100
+- What is mystery3(13)? 100
+- What is mystery3(-6)? 200
 
 ### Trace #4
 ```
@@ -75,9 +91,11 @@ def mystery4(b,e)
 end
 ```
 
-- What is mystery4(10,2)?
-- What is mystery4(4,3)?
-- What is mystery4(5,0)?
+- What is mystery4(10,2)?  100
+- What is mystery4(4,3)?  64
+- What is mystery4(5,0)?  1
+
+I'll keep working at 5 and push that as well. and maybe 6 too. (these are not the easiest for me.)
 
 ### Trace #5
 ```
