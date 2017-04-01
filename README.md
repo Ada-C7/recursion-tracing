@@ -1,7 +1,7 @@
 # Recursion Problems
 
 ## Definitions
-Define the following: 
+Define the following:
 
 - Recursion
 - Recursive Case
@@ -23,10 +23,11 @@ def mystery1(n)
   end
 end
 ```
+- What is mystery1(5)? 15
+- What is mystery1(10)? 55
+- What is mystery1(0)? Infinite recursion
 
-- What is mystery1(5)?
-- What is mystery1(10)?
-- What is mystery1(0)?
+
 
 ### Trace #2
 ```
@@ -37,11 +38,13 @@ def mystery2(n)
     return (n%10) + mystery2(n/10)
   end
 end
+
+
 ```
 
-- What is mystery2(123)?
-- What is mystery2(9005)?
-- What is mystery2(-123)?
+- What is mystery2(123)?  6
+- What is mystery2(9005)?  14
+- What is mystery2(-123)?  123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
 
 ### Trace #3
@@ -60,9 +63,9 @@ def mystery3(n)
 end
 ```
 
-- What is mystery3(1)?
-- What is mystery3(13)?
-- What is mystery3(-6)?
+- What is mystery3(1)? 100
+- What is mystery3(13)? 100
+- What is mystery3(-6)? 200
 
 ### Trace #4
 ```
@@ -75,9 +78,11 @@ def mystery4(b,e)
 end
 ```
 
-- What is mystery4(10,2)?
-- What is mystery4(4,3)?
-- What is mystery4(5,0)?
+- What is mystery4(10,2)?  100
+- What is mystery4(4,3)?  64
+- What is mystery4(5,0)?  1
+
+I'll keep working at 5 and push that as well. and maybe 6 too. (these are not the easiest for me.)
 
 ### Trace #5
 ```
