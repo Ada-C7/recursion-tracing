@@ -55,6 +55,17 @@ end
 - What is mystery2(9005)? 14
 - What is mystery2(-123)? -123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
+  We could change the first part of the if statement to an absolute statement,
+
+  ```
+  def mystery2(n)
+    if n.abs < 10
+      return n
+    else
+      return (n%10) + mystery2(n/10)
+    end
+  end
+  ```
 
 ### Trace #3
 ```
@@ -106,6 +117,27 @@ end
 - What is mystery5 ""
 - What is mystery5("Hi, there!")? "**********"
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
+
+We could make change it to the following,
+
+```
+chars = ('a'..'z').to_a + ('A'..'Z').to_a
+
+def mystery5(s)
+
+chars = ('a'..'z').to_a + ('A'..'Z').to_a
+
+  if s.length == 0
+    return ""
+  else
+    if chars.include? s[0]
+      return "*" + mystery5(s[1..-1])
+    else
+      return mystery5(s[1..-1])
+    end
+  end
+end
+```
 
 ### Trace #6
 ```
