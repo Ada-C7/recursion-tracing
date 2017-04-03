@@ -24,9 +24,9 @@ def mystery1(n)
 end
 ```
 
-- What is mystery1(5)?
-- What is mystery1(10)?
-- What is mystery1(0)?
+- What is mystery1(5)? 15
+- What is mystery1(10)? 55
+- What is mystery1(0)? Stack Too Deep
 
 ### Trace #2
 ```
