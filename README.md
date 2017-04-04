@@ -14,7 +14,7 @@ Define the following:
 ## Tracing through a recursive method
 
 ### Trace #1
-```
+```ruby
 def mystery1(n)
   if n == 1
     return n
@@ -29,7 +29,7 @@ end
 - What is mystery1(0)? Stack Overflow
 
 ### Trace #2
-```
+```ruby
 def mystery2(n)
   if n < 10
     return n
@@ -56,7 +56,7 @@ end
   ```
 
 ### Trace #3
-```
+```ruby
 def mystery3(n)
   if n == 0
     return 100
@@ -76,7 +76,7 @@ end
 - What is mystery3(-6)? 200
 
 ### Trace #4
-```
+```ruby
 def mystery4(b,e)
   if e == 0
     return 1
@@ -91,7 +91,7 @@ end
 - What is mystery4(5,0)? 1
 
 ### Trace #5
-```
+```ruby
 def mystery5(s)
   if s.length == 0
     return ""
@@ -109,16 +109,15 @@ end
   def mystery5(s)
     if s.length == 0
       return ""
-    elsif s[0].match(/[a-zA-Z]/)
-      return "*" + mystery5(s[1..-1])
     else
-      return mystery5(s[1..-1])
+      s[0] = "*" if s[0].match(/[a-zA-Z]/)
+      return s[0] + mystery5(s[1..-1])
     end
   end
   ```
 
 ### Trace #6
-```
+```ruby
 def mystery6(s)
   if s == nil || s.length == 0
     return ""
@@ -136,7 +135,7 @@ end
 - What is mystery6("Ada Developers Academy")? " Academy Developers Ada"
 - What is mystery6("Hi, there!")? " there! Hi,"
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
-```
+```ruby
 def mystery6(s)
   if s == nil || s.length == 0
     return ""
