@@ -1,15 +1,15 @@
 # Recursion Problems
 
 ## Definitions
-Define the following: 
+Define the following:
 
-- Recursion
-- Recursive Case
-- Base Case
-- Activation Chain/Stack
+- Recursion: Recursion is when you have a method that calls itself. All recursive methods can be written iteratively.
+- Recursive Case: The initial case where there isn't a known number.
+- Base Case: When you finally get to the point where you can input a known number and "work backwards" to get the answer to a recursive problem.
+- Activation Chain/Stack: The process in which recursion occurs 
 - Activation Record/Call
-- Infinite Recursion/Stack Overflow/Stack too deep
-- Tail Recursion
+- Infinite Recursion/Stack Overflow/Stack too deep: When a problem can't be solved/will keep going on recursion forever.
+- Tail Recursion: The last chain of the recursion.
 
 ## Tracing through a recursive method
 
@@ -24,7 +24,7 @@ def mystery1(n)
 end
 ```
 
-- What is mystery1(5)?
+- What is mystery1(5)? did problems below
 - What is mystery1(10)?
 - What is mystery1(0)?
 
@@ -39,9 +39,9 @@ def mystery2(n)
 end
 ```
 
-- What is mystery2(123)?
-- What is mystery2(9005)?
-- What is mystery2(-123)?
+- What is mystery2(123)? 6
+- What is mystery2(9005)? 14
+- What is mystery2(-123)? -123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
 
 ### Trace #3
@@ -61,7 +61,7 @@ end
 ```
 
 - What is mystery3(1)?
-- What is mystery3(13)?
+- What is mystery3(13)? 100
 - What is mystery3(-6)?
 
 ### Trace #4
