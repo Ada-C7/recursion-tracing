@@ -20,7 +20,8 @@ Define the following:
       Tail Recursion is where calculations are made at every step in the recursive case, and the result is then passed to the next call of the method. It is different from traditional recursion where the full chain of recursive calls must be made before the calculations begin.
 
       In other words, in Traditional Recursion, the full chain of recursive calls are made and held in the stack. Then, once the base case is reached, calculations begin and the results for each record are passed back up the chain.
-      In Tail Recursion, however, calculations are made along the way and only the results are passed to successive recursive cases.
+      In Tail Recursion, however, calculations are made along the way and only the results are passed to successive recursive cases. (Ie,in Tail Recursion, no calculations happen on the return line).
+      
       The benefit of Tail Recursion, in languages that support it, is that the compiler does not need to keep track of the entire activation chain/stack. Instead, at each recursive step, it can simply replace the data and reuse the 'current stack frame'.
 
 ## Tracing through a recursive method
@@ -56,6 +57,7 @@ end
 - What is mystery2(9005)?   14
 - What is mystery2(-123)?  -123
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_
+
 We could "ignore the negative sign" while we sum the digits and then replace it at the end. This could be done as follows:
 
 def mystery2B(n)
@@ -121,7 +123,7 @@ end
 - What is mystery5("Hi, there!")? **********
 
 - _Added Fun: How could we make only alphabetic characters to be changed to stars?_
-def mystery5C(s)
+  def mystery5C(s)
   alpha_all = ("A".."Z").to_a.concat ("a".."z").to_a
   if s.length == 0
     return ""
